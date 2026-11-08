@@ -50,6 +50,7 @@ revoke insert, delete on public.class_photos from anon, authenticated;
 grant select on public.class_events to anon, authenticated;
 grant select on public.class_photos to anon, authenticated;
 grant insert on public.class_events to authenticated;
+grant delete on public.class_events to authenticated;
 grant insert on public.class_photos to authenticated;
 grant delete on public.class_photos to authenticated;
 
@@ -65,6 +66,10 @@ create policy "Class members can add class events"
   with check (public.is_class_member());
 
 drop policy if exists "Public can delete class events" on public.class_events;
+drop policy if exists "Class members can delete class events" on public.class_events;
+create policy "Class members can delete class events"
+  on public.class_events for delete to authenticated
+  using (public.is_class_member());
 
 drop policy if exists "Public can read class photos" on public.class_photos;
 create policy "Public can read class photos"

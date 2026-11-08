@@ -2166,6 +2166,9 @@ const updateClassAccessUI = () => {
   document.querySelectorAll(".photo-delete-button").forEach((button) => {
     button.hidden = !canContribute;
   });
+  document.querySelectorAll(".countdown-remove").forEach((button) => {
+    button.hidden = !canContribute;
+  });
   document.getElementById("photo-grid")?.classList.toggle("is-managing", canContribute);
   accessStatus.textContent = canContribute
     ? `Masuk sebagai ${currentSession.user.email}`
@@ -3425,7 +3428,7 @@ const initClassTools = async () => {
       .forEach((event) => {
         const card = document.createElement("article");
         card.className = "countdown-event-card";
-      card.dataset.timestamp = String(event.timestamp);
+        card.dataset.timestamp = String(event.timestamp);
 
         const header = document.createElement("div");
         header.className = "countdown-event-header";
@@ -3442,6 +3445,46 @@ const initClassTools = async () => {
         details.append(name, date);
 
         header.append(details);
+        const removeButton = document.createElement("button");
+        removeButton.className = "countdown-remove";
+        removeButton.type = "button";
+        removeButton.textContent = "×";
+        removeButton.setAttribute("aria-label", `Hapus acara ${event.name}`);
+        removeButton.title = "Hapus acara";
+        removeButton.hidden = !canContribute;
+        removeButton.addEventListener("click", async () => {
+          if (!canContribute) {
+            setStatus("Hanya anggota kelas yang dapat menghapus acara.", true);
+            return;
+          }
+
+          removeButton.disabled = true;
+          const { error } = await supabase
+            .from("class_events")
+            .delete()
+            .eq("id", event.id)
+            .select("id")
+            .single();
+          if (error) {
+            removeButton.disabled = false;
+            setStatus("Acara gagal dihapus. Pastikan SQL Supabase terbaru sudah dijalankan.", true);
+            console.error("Gagal menghapus acara dari Supabase:", error);
+            return;
+          }
+
+          events = events.filter((item) => item.id !== event.id);
+          card.remove();
+          setStatus(
+            events.length
+              ? "Acara berhasil dihapus."
+              : "Belum ada acara yang disetel. Tekan tombol + untuk menambah acara."
+          );
+          if (events.length === 0 && countdownInterval !== null) {
+            window.clearInterval(countdownInterval);
+            countdownInterval = null;
+          }
+        });
+        header.append(removeButton);
 
         const display = createCountdownDisplay();
         card.append(header, display);
@@ -3459,16 +3502,31 @@ const initClassTools = async () => {
   };
 
   const updateCountdowns = () => {
+    const now = Date.now();
+    let hasExpiredEvent = false;
     eventList.querySelectorAll(".countdown-event-card").forEach((card) => {
-      const timeLeft = Number(card.dataset.timestamp) - Date.now();
+      const timeLeft = Number(card.dataset.timestamp) - now;
+      if (timeLeft <= 0) {
+        card.remove();
+        hasExpiredEvent = true;
+        return;
+      }
       setCountdown(
         card.querySelector(".countdown-display"),
-        Math.max(0, timeLeft)
+        timeLeft
       );
-      if (timeLeft <= 0) {
-        card.dataset.completed = "true";
-      }
     });
+
+    if (hasExpiredEvent) {
+      events = events.filter((event) => event.timestamp > now);
+      if (events.length === 0) {
+        setStatus("Belum ada acara yang disetel. Tekan tombol + untuk menambah acara.");
+        if (countdownInterval !== null) {
+          window.clearInterval(countdownInterval);
+          countdownInterval = null;
+        }
+      }
+    }
   };
 
   addButton.addEventListener("click", () => {
@@ -3622,7 +3680,7 @@ const initClassTools = async () => {
   const existingIds = new Set(existingEvents.map(({ id }) => id));
   const eventsToMigrate = canContribute
     ? localEvents
-        .filter(({ id }) => !existingIds.has(id))
+        .filter(({ id, timestamp }) => !existingIds.has(id) && timestamp > Date.now())
         .map((item) => ({
           id: item.id,
           name: item.name.trim(),
@@ -3648,6 +3706,7 @@ const initClassTools = async () => {
   const { data: remoteEvents, error: loadError } = await supabase
     .from("class_events")
     .select("id, name, event_at")
+    .gt("event_at", new Date().toISOString())
     .order("event_at", { ascending: true });
   if (loadError) {
     setStatus("Acara publik gagal dimuat dari Supabase.", true);
