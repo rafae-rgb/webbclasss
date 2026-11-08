@@ -1,0 +1,3752 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas 11 | SMAN 02 Kec. Pangkalan Koto Baru</title>
+    <meta
+      name="description"
+      content="Profil kelas 11 SMAN 02 Kec. Pangkalan Koto Baru, dengan 15 siswa Bisnis dan 9 siswa Sains."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+:root {
+  --primary: #1d4ed8;
+  --primary-dark: #1e3a8a;
+  --secondary: #f59e0b;
+  --success: #10b981;
+  --text: #172033;
+  --muted: #5d6b82;
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --border: #e3e8f0;
+  --shadow: 0 16px 38px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.alt-bg {
+  background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+}
+
+.section-heading {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 600ms ease var(--reveal-delay, 0ms),
+    transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+  background: rgba(247, 249, 252, 0.9);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 82px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.brand small {
+  color: var(--muted);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), #4f46e5);
+  box-shadow: var(--shadow);
+}
+
+.brand-mark svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--primary-dark);
+}
+
+.menu-toggle {
+  width: 44px;
+  height: 44px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  background: white;
+  color: var(--primary-dark);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+}
+
+.menu-toggle svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.hero {
+  background: radial-gradient(circle at top, #dfeaff 0%, rgba(223, 234, 255, 0) 35%),
+    linear-gradient(180deg, #f5f8ff 0%, #eef4ff 100%);
+  padding: 92px 0 72px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  line-height: 1.08;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 620px;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  color: white;
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.25);
+}
+
+.btn-secondary {
+  background: white;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.hero-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hero-stats li {
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 18px 14px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.hero-stats span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-card {
+  position: relative;
+}
+
+.hero-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mini-card {
+  position: relative;
+  margin-top: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 30px rgba(31, 41, 55, 0.1);
+  animation: motto-enter 650ms ease-out both;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(31, 41, 55, 0.14);
+}
+
+@keyframes motto-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mini-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.class-tools {
+  padding: 64px 0;
+  background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+}
+
+.class-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.tool-card {
+  padding: clamp(22px, 4vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.tool-card h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.tool-description {
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+
+.quote-text {
+  min-height: 5.2em;
+  margin: 24px 0 0;
+  padding: 20px;
+  border-left: 4px solid var(--secondary);
+  border-radius: 0 14px 14px 0;
+  background: #fffbeb;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+}
+
+.countdown-form {
+  display: grid;
+  gap: 14px;
+}
+
+.countdown-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--text);
+  font-weight: 650;
+}
+
+.countdown-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfdff;
+  color: var(--text);
+}
+
+.countdown-form input:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: #93c5fd;
+}
+
+.countdown-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.countdown-actions .btn {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.countdown-add {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.2);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.countdown-add:hover {
+  transform: scale(1.06);
+  background: var(--primary-dark);
+}
+
+.countdown-add:focus-visible,
+.countdown-remove:focus-visible,
+.countdown-form-cancel:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.countdown-list {
+  display: grid;
+  gap: 14px;
+}
+
+.countdown-event-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.countdown-event-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.countdown-event-name {
+  margin: 0;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.countdown-event-date {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.countdown-remove {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: #b91c1c;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.countdown-remove:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.countdown-display {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.countdown-unit {
+  padding: 12px 8px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f8faff;
+  text-align: center;
+}
+
+.countdown-unit strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.countdown-status {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.countdown-status.is-error {
+  color: #b91c1c;
+}
+
+.countdown-form[hidden],
+.countdown-event-card[hidden] {
+  display: none;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-text {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.highlight-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.highlight-box h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.highlight-box ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.family-grid,
+.structure-grid,
+.student-grid,
+.achievement-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.family-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.family-card,
+.achievement-card,
+.student-card,
+.structure-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.06);
+}
+
+.family-card {
+  padding: 22px 20px;
+  border-top: 4px solid #93c5fd;
+  height: 100%;
+}
+
+.family-card-visual {
+  display: grid;
+  place-items: center;
+  width: min(100%, 240px);
+  aspect-ratio: 1;
+  margin: 0 auto 16px;
+}
+
+.family-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 220ms ease;
+}
+
+.family-logo-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.family-logo-trigger:hover .family-logo,
+.family-logo-trigger:focus-visible .family-logo {
+  transform: scale(1.05);
+}
+
+.family-logo-trigger:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 5px;
+}
+
+.major-modal {
+  width: min(760px, calc(100% - 28px));
+  max-width: none;
+  max-height: min(88vh, 900px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
+}
+
+.major-modal[open] {
+  animation: modal-fade-in 220ms ease-out both;
+}
+
+.major-modal::backdrop {
+  background: rgba(15, 23, 42, 0.62);
+  animation: backdrop-fade-in 220ms ease-out both;
+}
+
+.major-modal-content {
+  padding: clamp(20px, 5vw, 36px);
+}
+
+.major-modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 48px 22px 0;
+  animation: modal-header-enter 450ms ease-out both;
+}
+
+.major-modal-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: #dbeafe;
+  font-size: 2rem;
+}
+
+.major-modal-header h2 {
+  margin: 0 0 4px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+
+.major-modal-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.major-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.major-modal-close:hover {
+  background: #eef4ff;
+}
+
+.major-modal-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: white;
+}
+
+.major-modal-section h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.major-modal-section p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.major-student-count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--primary-dark);
+}
+
+.major-student-count strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.major-student-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 20px;
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.major-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.major-award-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.major-showcase-placeholder,
+.major-award-card,
+.major-subject {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8faff;
+}
+
+.major-showcase-placeholder {
+  min-height: 86px;
+  display: grid;
+  align-content: center;
+}
+
+.major-showcase-placeholder strong,
+.major-award-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.major-award-card {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.major-subject {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.major-subject-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.major-subject-icon {
+  flex: 0 0 auto;
+  font-size: 1.8rem;
+}
+
+.major-subject blockquote {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes backdrop-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.family-card:nth-child(2) {
+  border-top-color: #f59e0b;
+}
+
+.family-card h3 {
+  margin: 0 0 12px;
+}
+
+.family-card p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.structure-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.structure-card {
+  padding: 24px 18px;
+}
+
+.teacher-card {
+  width: min(100%, 420px);
+  margin: 0 auto 28px;
+  text-align: center;
+  border-top: 4px solid var(--secondary);
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.structure-card h3 {
+  margin: 16px 0 8px;
+}
+
+.structure-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.student-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.student-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.student-filters input,
+.student-filters select {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  color: var(--text);
+}
+
+.student-filters input:focus,
+.student-filters select:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: #93c5fd;
+}
+
+.student-results {
+  min-height: 1.5em;
+  margin: -8px 0 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.student-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+}
+
+.student-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.student-body {
+  min-width: 0;
+}
+
+.student-card h3 {
+  margin: 0 0 8px;
+}
+
+.student-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.schedule-wrap {
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.schedule-toggle {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  color: var(--primary-dark);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.schedule-toggle:hover {
+  background: #f8faff;
+  border-color: #bfdbfe;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.schedule-table thead th {
+  background: #f8faff;
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule-table tbody td:first-child {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.schedule-table tbody td.shared-subject {
+  text-align: center;
+  background: #f0f7ff;
+}
+
+.schedule-table tbody tr.schedule-break {
+  background: #fff8e8;
+  color: #8a5a00;
+  font-weight: 600;
+}
+
+.schedule-table tbody tr.schedule-break td:first-child {
+  color: #8a5a00;
+}
+
+.schedule-table tbody tr.schedule-today:not(.schedule-break) {
+  background: #ecfdf5;
+}
+
+.schedule-table tbody tr.schedule-today td:first-child {
+  color: #047857;
+}
+
+.schedule-table tbody tr.schedule-today td:first-child::after {
+  content: "Hari ini";
+  display: block;
+  margin-top: 2px;
+  color: #059669;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.teacher-legend {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.06);
+}
+
+.teacher-legend h3 {
+  margin: 0 0 18px;
+}
+
+.teacher-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.teacher-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #f8faff;
+  border-radius: 12px;
+}
+
+.teacher-entry dt {
+  min-width: 42px;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.teacher-entry dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.photo-grid {
+  position: relative;
+  min-height: 700px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, 0.14) 1px, transparent 0)
+      0 0 / 22px 22px,
+    linear-gradient(145deg, #e9eff8, #f5f7fb);
+}
+
+.photo-grid.is-managing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+  align-items: start;
+  gap: 20px;
+  height: auto !important;
+  min-height: 0;
+  overflow: visible;
+  padding: 20px;
+}
+
+.photo-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(150px, 20vw, 220px);
+  padding: 10px 10px 18px;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid #e6e3de;
+  background: #fffefa;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2), 0 3px 7px rgba(15, 23, 42, 0.1);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  transform: rotate(var(--rotation, 0deg));
+  transition: box-shadow 180ms ease, filter 180ms ease;
+  animation: polaroid-enter 420ms ease-out var(--enter-delay, 0ms) both;
+}
+
+.photo-grid.is-managing .photo-card {
+  position: relative;
+  top: auto !important;
+  left: auto !important;
+  width: 100%;
+  transform: none !important;
+  animation: none;
+  cursor: default;
+  touch-action: auto;
+}
+
+.photo-card:hover {
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.24), 0 5px 10px rgba(15, 23, 42, 0.12);
+  filter: brightness(1.02);
+}
+
+.photo-card:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.photo-card.is-dragging {
+  cursor: grabbing;
+  transition: none;
+  box-shadow: 0 24px 44px rgba(15, 23, 42, 0.3);
+  animation: none;
+}
+
+@keyframes polaroid-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.photo-card figcaption {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  padding: 10px 5px 0;
+  color: var(--text);
+  font-family: "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  pointer-events: none;
+}
+
+.photo-gallery-hint {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.photo-gallery-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+#class-access-status {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.photo-add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  color: white;
+  font-weight: 750;
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.2);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.photo-add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(29, 78, 216, 0.26);
+}
+
+.photo-add-button span {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.photo-delete-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  color: #b91c1c;
+  font-size: 1.15rem;
+  line-height: 1;
+  pointer-events: auto;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.photo-delete-button:hover,
+.photo-delete-button:focus-visible {
+  background: #fef2f2;
+}
+
+.photo-delete-button:focus-visible {
+  outline: 3px solid #fecaca;
+  outline-offset: 2px;
+}
+
+.photo-modal-form {
+  display: grid;
+  gap: 16px;
+}
+
+.photo-modal-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--text);
+  font-weight: 650;
+}
+
+.photo-modal-form input[type="file"],
+.photo-modal-form input[type="url"],
+.photo-modal-form input[type="text"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfdff;
+  color: var(--text);
+}
+
+.photo-modal-form input:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: #93c5fd;
+}
+
+.photo-modal-error {
+  min-height: 1.5em;
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.achievement-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.achievement-card {
+  padding: 24px 22px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge.success {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.badge.info {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary-dark);
+}
+
+.badge.warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  color: var(--muted);
+  display: grid;
+  gap: 10px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-list li > svg {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  fill: none;
+  stroke: var(--primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.contact-list li > span {
+  min-width: 0;
+}
+
+.contact-list a {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfdff;
+  padding: 14px 16px;
+  color: var(--text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: #93c5fd;
+}
+
+.site-footer {
+  background: #0f172a;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 20px 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .profile-grid,
+  .contact-grid,
+  .class-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-grid,
+  .structure-grid,
+  .student-grid,
+  .achievement-grid,
+  .teacher-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    padding-inline: 12px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 82px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .student-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .family-grid,
+  .structure-grid,
+  .student-grid,
+  .achievement-grid,
+  .teacher-list {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-row {
+    flex-direction: column;
+  }
+
+  .major-modal {
+    max-height: 92vh;
+    border-radius: 20px;
+  }
+
+  .major-modal-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .major-modal-icon {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 1.65rem;
+  }
+
+  .major-modal-section {
+    padding: 16px;
+  }
+
+  .major-subject-list {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    min-height: 1200px;
+    border-radius: 18px;
+  }
+
+  .photo-card {
+    width: clamp(132px, 42vw, 190px);
+    padding: 8px 8px 14px;
+  }
+
+  .photo-card figcaption {
+    min-height: 54px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .mini-card {
+    animation: none;
+    transition: none;
+  }
+
+  .family-logo,
+  .major-modal[open],
+  .major-modal::backdrop,
+  .major-modal-header,
+  .photo-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M4 12.5 16 6l12 6.5L16 19 4 12.5Z" />
+              <path d="M9 15.5v6c4.4 3.2 9.6 3.2 14 0v-6" />
+              <path d="M28 13v8" />
+            </svg>
+          </span>
+          <div>
+            <strong>Kelas 11</strong>
+            <small>Bisnis 15 orang • Sains 9 orang</small>
+          </div>
+        </div>
+
+        <nav id="primary-navigation" class="nav" aria-label="Navigasi utama">
+          <a href="#home">Home</a>
+          <a href="#acara">Acara</a>
+          <a href="#profil">Profil</a>
+          <a href="#biodata">Biodata</a>
+          <a href="#struktur">Struktur</a>
+          <a href="#siswa">Siswa</a>
+          <a href="#jadwal">Jadwal</a>
+          <a href="#dokumentasi">Dokumentasi</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Selamat datang di ruang kelas kami</p>
+            <h1>Kelas 11 SMAN 02 Pangkalan Koto Baru.</h1>
+            <p class="lead">
+              Kelas kami di SMAN 02 Kec. Pangkalan Koto Baru terdiri dari dua
+              jurusan: Bisnis dengan 15 orang dan Sains dengan 9 orang. Kami adalah tim yang solid,
+              semangat, dan selalu siap belajar bersama menuju masa depan yang
+              lebih baik.
+            </p>
+            <div class="cta-group">
+              <a href="#profil" class="btn btn-primary">Lihat Profil</a>
+              <a href="#kontak" class="btn btn-secondary">Hubungi Kami</a>
+            </div>
+            <ul class="hero-stats" aria-label="Statistik kelas">
+              <li><strong>24</strong><span>Total Siswa</span></li>
+              <li><strong>15</strong><span>Jurusan Bisnis</span></li>
+              <li><strong>9</strong><span>Jurusan Sains</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-image-wrap">
+              <img
+                id="hero-photo"
+                alt="Foto bersama siswa kelas 11 SMAN 02 Kec. Pangkalan Koto Baru"
+              />
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Moto Kelas</span>
+              <strong>“Belajar tanpa henti, maju bersama.”</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="acara" class="class-tools">
+        <div class="container class-tools-grid">
+          <article class="tool-card">
+            <p class="eyebrow">Penyemangat Hari Ini</p>
+            <h2>Kutipan Acak</h2>
+            <p class="tool-description">
+              Sedikit humor supaya semangat belajar tetap jalan.
+            </p>
+            <blockquote id="daily-quote" class="quote-text"></blockquote>
+          </article>
+
+          <article class="tool-card">
+            <p class="eyebrow">Hitung Mundur</p>
+            <h2>Acara Kelas Berikutnya</h2>
+            <p class="tool-description">
+              Acara dapat dilihat semua pengunjung. Hanya akun anggota kelas yang terdaftar dapat menambahkan acara.
+            </p>
+            <button
+              id="countdown-add"
+              class="countdown-add"
+              type="button"
+              aria-label="Tambah acara"
+              aria-expanded="false"
+              aria-controls="countdown-form"
+            >+</button>
+            <form id="countdown-form" class="countdown-form" hidden>
+              <label for="countdown-event-input">
+                Nama Acara
+                <input
+                  id="countdown-event-input"
+                  name="eventName"
+                  type="text"
+                  maxlength="80"
+                  placeholder="Contoh: Study Tour"
+                  required
+                />
+              </label>
+              <label for="countdown-date-input">
+                Tanggal &amp; Waktu
+                <input
+                  id="countdown-date-input"
+                  name="eventDate"
+                  type="datetime-local"
+                  required
+                />
+              </label>
+              <div class="countdown-actions">
+                <button class="btn btn-primary" type="submit">Setel Timer</button>
+                <button
+                  id="countdown-form-cancel"
+                  class="btn btn-secondary countdown-form-cancel"
+                  type="button"
+                >
+                  Batal
+                </button>
+              </div>
+            </form>
+            <div id="countdown-list" class="countdown-list"></div>
+            <p
+              id="countdown-status"
+              class="countdown-status"
+              role="status"
+              aria-live="polite"
+            >
+              Belum ada acara yang disetel. Tekan tombol + untuk menambah acara.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="profil" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Profil Kelas</p>
+            <h2>Kenali lebih dekat kelas 11 SMA kami</h2>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-text">
+              <p>
+                Kelas 11 SMAN 02 Kec. Pangkalan Koto Baru terdiri dari dua jurusan utama, yaitu Bisnis
+                sebanyak 15 orang dan Sains sebanyak 9 orang. Meskipun terbagi
+                dalam jurusan yang berbeda, kami tetap menjaga semangat
+                kebersamaan, kedisiplinan, dan kerja keras dalam setiap aktivitas
+                belajar.
+              </p>
+              <p>
+                Di kelas ini, setiap siswa didorong untuk berpikir kritis,
+                aktif berdiskusi, dan terus berkembang dalam ilmu serta
+                karakter. Kami percaya bahwa keberhasilan tidak hanya datang dari
+                kemampuan akademik, tetapi juga dari kerja sama dan sikap saling
+                mendukung.
+              </p>
+            </div>
+
+            <div class="highlight-box">
+              <h3>Visi Kelas</h3>
+              <p>
+                Menjadi kelas yang unggul dalam prestasi akademik, berakhlak
+                mulia, dan solid dalam kebersamaan.
+              </p>
+              <h3>Misi Kelas</h3>
+              <ul>
+                <li>Menumbuhkan semangat belajar yang tinggi</li>
+                <li>Mengembangkan sikap disiplin dan tanggung jawab</li>
+                <li>Menciptakan lingkungan kelas yang nyaman dan harmonis</li>
+                <li>Mendorong prestasi di bidang akademik dan non-akademik</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="biodata" class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Biodata Kelas</p>
+            <h2>Data kelas 11 SMA dan pembagian jurusan</h2>
+          </div>
+
+          <div class="family-grid">
+            <article class="family-card">
+              <div class="family-card-visual">
+                <button
+                  class="family-logo-trigger"
+                  type="button"
+                  data-major="business"
+                  aria-haspopup="dialog"
+                  aria-label="Lihat informasi Jurusan Bisnis"
+                >
+                  <img
+                    class="family-logo"
+                    src="82b7bec0-0dde-4606-a622-0748531027be.jpg"
+                    alt="Logo Kelas Bisnis"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+              <h3>Jurusan Bisnis</h3>
+              <p><strong>Jumlah:</strong> 15 Orang</p>
+            </article>
+
+            <article class="family-card">
+              <div class="family-card-visual">
+                <button
+                  class="family-logo-trigger"
+                  type="button"
+                  data-major="science"
+                  aria-haspopup="dialog"
+                  aria-label="Lihat informasi Jurusan Sains"
+                >
+                  <img
+                    class="family-logo"
+                    src="80bc9549-9422-4b00-b3c6-e77ed70a7f26.jpg"
+                    alt="Logo Kelas Sains"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+              <h3>Jurusan Sains</h3>
+              <p><strong>Jumlah:</strong> 9 Orang</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <dialog
+        id="major-modal"
+        class="major-modal"
+        aria-labelledby="major-modal-title"
+      >
+        <div id="major-modal-content" class="major-modal-content"></div>
+      </dialog>
+
+      <section id="struktur" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Struktur Kelas</p>
+            <h2>Organisasi kelas yang solid</h2>
+          </div>
+
+          <div id="teacher-card"></div>
+          <div id="structure-list" class="structure-grid"></div>
+        </div>
+      </section>
+
+      <section id="siswa" class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Data Siswa</p>
+            <h2>24 siswa kelas 11</h2>
+            <p>15 siswa jurusan Bisnis dan 9 siswa jurusan Sains</p>
+          </div>
+
+          <div class="student-filters">
+            <label class="visually-hidden" for="student-search">Cari nama siswa</label>
+            <input
+              id="student-search"
+              type="search"
+              placeholder="Cari nama siswa..."
+              autocomplete="off"
+            />
+            <label class="visually-hidden" for="student-major-filter">Filter jurusan</label>
+            <select id="student-major-filter">
+              <option value="all">Semua jurusan</option>
+              <option value="science">Sains</option>
+              <option value="business">Bisnis</option>
+            </select>
+          </div>
+          <p id="student-results" class="student-results" role="status" aria-live="polite"></p>
+          <div id="student-list" class="student-grid"></div>
+        </div>
+      </section>
+
+      <section id="jadwal" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Jadwal Pelajaran</p>
+            <h2>Jadwal kelas XI.F</h2>
+          </div>
+
+          <div class="schedule-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col">Hari</th>
+                  <th scope="col">Jam ke-</th>
+                  <th scope="col">Waktu</th>
+                  <th scope="col">XI.F Sains</th>
+                  <th scope="col">XI.F Bisnis</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-table-body"></tbody>
+            </table>
+          </div>
+          <button
+            id="schedule-toggle"
+            class="schedule-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="schedule-table-body"
+          >
+            Lihat jadwal selengkapnya
+          </button>
+
+          <div class="teacher-legend">
+            <h3>Keterangan Kode Guru</h3>
+            <dl id="teacher-list" class="teacher-list"></dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="dokumentasi" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Dokumentasi</p>
+            <h2>Foto-foto Kelas</h2>
+            <p>Dokumentasi kegiatan dan momen kelas XI.F.</p>
+          </div>
+
+          <p class="photo-gallery-hint">
+            Geser foto dengan mouse atau jari untuk mengatur posisi. Klik foto
+            untuk membawanya ke tumpukan paling atas. Foto tambahan dibagikan ke
+            semua pengunjung; hanya akun anggota kelas yang terdaftar dapat menambahkan foto.
+          </p>
+          <div class="photo-gallery-toolbar">
+            <span id="class-access-status" role="status" aria-live="polite">
+              Memeriksa akses akun...
+            </span>
+            <button id="class-login-button" class="btn btn-secondary" type="button">
+              Masuk teman sekelas
+            </button>
+            <button
+              id="class-logout-button"
+              class="btn btn-secondary"
+              type="button"
+              hidden
+            >Keluar</button>
+            <button
+              id="photo-add-button"
+              class="photo-add-button"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="photo-add-modal"
+            >
+              <span aria-hidden="true">+</span> Tambah Foto
+            </button>
+          </div>
+          <div id="photo-grid" class="photo-grid"></div>
+        </div>
+      </section>
+
+      <dialog
+        id="photo-add-modal"
+        class="major-modal"
+        aria-labelledby="photo-modal-title"
+      >
+        <div class="major-modal-content">
+          <header class="major-modal-header">
+            <span class="major-modal-icon" aria-hidden="true">📷</span>
+            <div>
+              <h2 id="photo-modal-title">Tambah Foto Polaroid</h2>
+              <p>Foto unggahan disimpan di Supabase dan dibagikan kepada semua pengunjung.</p>
+            </div>
+            <button
+              class="major-modal-close"
+              type="button"
+              data-close-photo-modal
+              aria-label="Tutup formulir foto"
+            >×</button>
+          </header>
+
+          <form id="photo-add-form" class="photo-modal-form" novalidate>
+            <label for="photo-file-input">
+              Unggah File Foto (maksimal 1 MB)
+              <input
+                id="photo-file-input"
+                name="photoFile"
+                type="file"
+                accept="image/jpeg,image/png,image/gif,image/webp"
+              />
+            </label>
+            <label for="photo-url-input">
+              Atau Tautan URL Foto
+              <input
+                id="photo-url-input"
+                name="photoUrl"
+                type="url"
+                placeholder="https://contoh.com/foto.jpg"
+              />
+            </label>
+            <label for="photo-caption-input">
+              Keterangan Foto / Catatan Polaroid
+              <input
+                id="photo-caption-input"
+                name="photoCaption"
+                type="text"
+                maxlength="120"
+                placeholder="Contoh: Kenangan seru di sekolah"
+                required
+              />
+            </label>
+            <p
+              id="photo-modal-error"
+              class="photo-modal-error"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <div class="countdown-actions">
+              <button class="btn btn-primary" type="submit">Simpan Foto</button>
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-close-photo-modal
+              >Batal / Tutup</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+
+      <dialog
+        id="class-login-modal"
+        class="major-modal"
+        aria-labelledby="class-login-title"
+      >
+        <div class="major-modal-content">
+          <header class="major-modal-header">
+            <span class="major-modal-icon" aria-hidden="true">🔐</span>
+            <div>
+              <h2 id="class-login-title">Masuk Teman Sekelas</h2>
+              <p>Gunakan akun yang diberikan pengurus kelas.</p>
+            </div>
+            <button
+              class="major-modal-close"
+              type="button"
+              data-close-class-login
+              aria-label="Tutup formulir masuk"
+            >×</button>
+          </header>
+          <form id="class-login-form" class="photo-modal-form">
+            <label for="class-login-email">
+              Email
+              <input
+                id="class-login-email"
+                type="email"
+                autocomplete="username"
+                required
+              />
+            </label>
+            <label for="class-login-password">
+              Kata sandi
+              <input
+                id="class-login-password"
+                type="password"
+                autocomplete="current-password"
+                required
+              />
+            </label>
+            <p
+              id="class-login-error"
+              class="photo-modal-error"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <div class="countdown-actions">
+              <button class="btn btn-primary" type="submit">Masuk</button>
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-close-class-login
+              >Batal</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+
+      <section id="kontak" class="section contact-section">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Kontak</p>
+            <h2>Hubungi kami</h2>
+            <p>
+              Untuk informasi mengenai kelas, silakan hubungi wali kelas kami
+              di SMAN 02 Kec. Pangkalan Koto Baru.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>SMAN 02 Kec. Pangkalan Koto Baru</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 20V5l8-3 8 3v15M2 20h20M9 20v-5h6v5M8 8h.01M12 8h.01M16 8h.01M8 11h.01M12 11h.01M16 11h.01" />
+                </svg>
+                <span>Wali kelas: Buk Jelvi Novia</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M17.5 6.5h.01" />
+                </svg>
+                <span>Instagram kelas:</span>
+                <a
+                  href="https://www.instagram.com/the_elevenstar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@the_elevenstar</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="highlight-box">
+            <h3>Informasi Kelas</h3>
+            <p>Kelas 11 terdiri dari 15 siswa Bisnis dan 9 siswa Sains, dengan total 24 siswa.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 Kelas 11 | SMAN 02 Kec. Pangkalan Koto Baru</p>
+        <p>Dibuat dengan semangat kebersamaan dan semangat jurusan</p>
+      </div>
+    </footer>
+
+    <script type="module">
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const supabase = createClient(
+  "https://mqyodtulnesdbudwbxyk.supabase.co",
+  "sb_publishable_bYyZSRl-In_Bm3qxawTZJQ_XwRvHcCv"
+);
+let currentSession = null;
+let canContribute = false;
+
+const updateClassAccessUI = () => {
+  const loginButton = document.getElementById("class-login-button");
+  const logoutButton = document.getElementById("class-logout-button");
+  const accessStatus = document.getElementById("class-access-status");
+  if (!loginButton || !logoutButton || !accessStatus) {
+    return;
+  }
+
+  loginButton.hidden = Boolean(currentSession);
+  logoutButton.hidden = !currentSession;
+  document.querySelectorAll(".photo-delete-button").forEach((button) => {
+    button.hidden = !canContribute;
+  });
+  document.getElementById("photo-grid")?.classList.toggle("is-managing", canContribute);
+  accessStatus.textContent = canContribute
+    ? `Masuk sebagai ${currentSession.user.email}`
+    : currentSession
+      ? "Akun ini belum terdaftar sebagai anggota kelas."
+      : "Masuk dengan akun teman sekelas untuk menambahkan konten.";
+};
+
+const refreshClassAccess = async () => {
+  const { data, error } = await supabase.auth.getSession();
+  if (error) {
+    throw error;
+  }
+  currentSession = data.session;
+  canContribute = false;
+
+  if (currentSession) {
+    const { data: isMember, error: memberError } = await supabase.rpc(
+      "is_class_member"
+    );
+    if (memberError) {
+      throw memberError;
+    }
+    canContribute = isMember === true;
+  }
+
+  updateClassAccessUI();
+};
+
+const initializeClassAccess = async () => {
+  supabase.auth.onAuthStateChange((_event, session) => {
+    currentSession = session;
+    canContribute = false;
+    updateClassAccessUI();
+    window.setTimeout(() => {
+      refreshClassAccess().catch((error) => {
+        const status = document.getElementById("class-access-status");
+        status.textContent = "Status akun gagal diperiksa. Muat ulang halaman.";
+        console.error("Gagal memeriksa akses anggota kelas:", error);
+      });
+    }, 0);
+  });
+
+  try {
+    await refreshClassAccess();
+  } catch (error) {
+    updateClassAccessUI();
+    const status = document.getElementById("class-access-status");
+    status.textContent = "Status akun gagal diperiksa. Pastikan SQL Supabase sudah dijalankan.";
+    console.error("Gagal memeriksa akses anggota kelas:", error);
+  }
+};
+
+const openClassLogin = () => {
+  document.getElementById("class-login-error").textContent = "";
+  document.getElementById("class-login-modal").showModal();
+};
+
+const initClassLogin = () => {
+  const modal = document.getElementById("class-login-modal");
+  const form = document.getElementById("class-login-form");
+  const emailInput = document.getElementById("class-login-email");
+  const passwordInput = document.getElementById("class-login-password");
+  const errorMessage = document.getElementById("class-login-error");
+
+  document.getElementById("class-login-button").addEventListener("click", openClassLogin);
+  document.getElementById("class-logout-button").addEventListener("click", async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      document.getElementById("class-access-status").textContent =
+        "Gagal keluar dari akun. Coba lagi.";
+      console.error("Gagal keluar dari akun kelas:", error);
+      return;
+    }
+    await refreshClassAccess();
+  });
+
+  modal.querySelectorAll("[data-close-class-login]").forEach((button) => {
+    button.addEventListener("click", () => modal.close());
+  });
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    errorMessage.textContent = "";
+    const { error } = await supabase.auth.signInWithPassword({
+      email: emailInput.value.trim(),
+      password: passwordInput.value,
+    });
+    if (error) {
+      errorMessage.textContent = "Email atau kata sandi salah. Periksa kembali.";
+      console.error("Gagal masuk ke akun kelas:", error);
+      return;
+    }
+
+    try {
+      await refreshClassAccess();
+    } catch (accessError) {
+      errorMessage.textContent = "Akses anggota gagal diperiksa. Hubungi pengurus kelas.";
+      console.error("Gagal memeriksa akses akun kelas:", accessError);
+      return;
+    }
+    if (!canContribute) {
+      errorMessage.textContent =
+        "Akun ini belum terdaftar sebagai anggota kelas. Hubungi pengurus kelas.";
+      return;
+    }
+    modal.close();
+    form.reset();
+  });
+};
+const structureData = [
+  {
+    role: "Ketua Kelas",
+    name: "Muhammad Restu",
+    detail: "Mengkoordinasikan kegiatan kelas dan komunikasi dengan guru.",
+  },
+  {
+    role: "Wakil Ketua",
+    name: "Farhan Dolifah",
+    detail: "Membantu ketua kelas dan mengawasi kegiatan organisasi kelas.",
+  },
+  {
+    role: "Sekretaris",
+    name: "Syafa Khairani",
+    detail: "Mengelola surat, jadwal, dan dokumentasi kegiatan kelas.",
+  },
+  {
+    role: "Bendahara",
+    name: "Arini Mulya Azzahra",
+    detail: "Mengelola keuangan kegiatan, iuran, dan laporan pemasukan.",
+  },
+];
+
+const students = [
+  { name: "Abdul Rahman", major: "science" },
+  { name: "Arini Mulya Azzahra", role: "Bendahara", major: "science" },
+  { name: "Arsyafin Fahri Almuntaha", major: "business" },
+  { name: "Awit Kurniawan", major: "science" },
+  { name: "Azahra", major: "business" },
+  { name: "Difa Oktavia", major: "science" },
+  { name: "Disya Luvindra", major: "business" },
+  { name: "Farhan Dolifah", role: "Wakil Ketua Kelas", major: "science" },
+  { name: "Ganza Padana", major: "science" },
+  { name: "Gilang Dwika Erlangga", major: "science" },
+  { name: "Muhammad Afkar Rayhan", major: "business" },
+  { name: "Muhammad Arafah", major: "business" },
+  { name: "Muhammad Rafael Dasrian", major: "science" },
+  { name: "Muhammad Restu", role: "Ketua Kelas", major: "business" },
+  { name: "Muhammad Richi Haykal", major: "business" },
+  { name: "Muhammad Vareski", major: "business" },
+  { name: "Mutia Nurhayati", major: "business" },
+  { name: "Nur Aida Zaskia", major: "science" },
+  { name: "Rafka Pratama", major: "business" },
+  { name: "Rindu Tri Amelia", major: "business" },
+  { name: "Sanggi Darma", major: "business" },
+  { name: "Stevani Olivia", major: "business" },
+  { name: "Syafa Khairani", role: "Sekretaris", major: "business" },
+  { name: "Yusuf Ivanders Damares", major: "business" },
+];
+
+const schedule = [
+  {
+    day: "Senin",
+    lessons: [
+      ["1", "7.15 - 7.55", "Upacara", "Upacara"],
+      ["2", "7.55 - 8.35", "WM (KIM)", "YA (EKO)"],
+      ["3", "8.35 - 9.15", "WM (KIM)", "YA (EKO)"],
+      ["-", "9.15 - 9.30", "Istirahat", "Istirahat"],
+      ["4", "9.30 - 10.10", "WM (KIM)", "YA (EKO)"],
+      ["5", "10.10 - 10.50", "JL (SBK)", "JL (SBK)"],
+      ["6", "10.50 - 11.30", "JL (SBK)", "JL (SBK)"],
+      ["7", "11.30 - 12.10", "MRY (MATHL)", "GG (GEO)"],
+      ["-", "12.10 - 12.50", "Ishoma", "Ishoma"],
+      ["8", "12.50 - 13.30", "MRY (MATHL)", "GG (GEO)"],
+      ["9", "13.30 - 14.10", "MRY (MATH)", "MRY (MATH)"],
+      ["10", "14.10 - 14.50", "MRY (MATH)", "MRY (MATH)"],
+      ["11", "14.50 - 15.30", "MRY (MATH)", "MRY (MATH)"],
+    ],
+  },
+  {
+    day: "Selasa",
+    lessons: [
+      ["1", "7.15 - 7.55", "DS (BING)", "DS (BING)"],
+      ["2", "7.55 - 8.35", "DS (BING)", "DS (BING)"],
+      ["3", "8.35 - 9.15", "DS (BING)", "DS (BING)"],
+      ["-", "9.15 - 9.30", "Istirahat", "Istirahat"],
+      ["4", "9.30 - 10.10", "WM (KIM)", "YA (EKO)"],
+      ["5", "10.10 - 10.50", "WM (KIM)", "YA (EKO)"],
+      ["6", "10.50 - 11.30", "IM (INFOR)", "IM (INFOR)"],
+      ["7", "11.30 - 12.10", "IM (INFOR)", "IM (INFOR)"],
+      ["-", "12.10 - 12.50", "Ishoma", "Ishoma"],
+      ["8", "12.50 - 13.30", "IM (INFOR)", "IM (INFOR)"],
+      ["9", "13.30 - 14.10", "MRY (MATHL)", "GG (GEO)"],
+      ["10", "14.10 - 14.50", "MRY (MATHL)", "GG (GEO)"],
+      ["11", "14.50 - 15.30", "MRY (MATHL)", "GG (GEO)"],
+    ],
+  },
+  {
+    day: "Rabu",
+    lessons: [
+      ["1", "7.15 - 7.55", "FA (PKN)", "FA (PKN)"],
+      ["2", "7.55 - 8.35", "FA (PKN)", "FA (PKN)"],
+      ["3", "8.35 - 9.15", "CH (PAI)", "CH (PAI)"],
+      ["-", "9.15 - 9.30", "Istirahat", "Istirahat"],
+      ["4", "9.30 - 10.10", "CH (PAI)", "CH (PAI)"],
+      ["5", "10.10 - 10.50", "RA (FIS)", "DS (BINGTL)"],
+      ["6", "10.50 - 11.30", "RA (FIS)", "DS (BINGTL)"],
+      ["7", "11.30 - 12.10", "RA (FIS)", "DS (BINGTL)"],
+      ["-", "12.10 - 12.50", "Ishoma", "Ishoma"],
+      ["8", "12.50 - 13.30", "YA (KOKUR)", "YA (KOKUR)"],
+      ["9", "13.30 - 14.10", "WM (KOKUR)", "WM (KOKUR)"],
+      ["10", "14.10 - 14.50", "RA (KOKUR)", "RA (KOKUR)"],
+      ["11", "14.50 - 15.30", "GG (KOKUR)", "GG (KOKUR)"],
+    ],
+  },
+  {
+    day: "Kamis",
+    lessons: [
+      ["1", "7.15 - 7.55", "SL (BIND)", "SL (BIND)"],
+      ["2", "7.55 - 8.35", "SL (BIND)", "SL (BIND)"],
+      ["3", "8.35 - 9.15", "SL (BIND)", "SL (BIND)"],
+      ["-", "9.15 - 9.30", "Istirahat", "Istirahat"],
+      ["4", "9.30 - 10.10", "RA (FIS)", "DS (BINGTL)"],
+      ["5", "10.10 - 10.50", "RA (FIS)", "DS (BINGTL)"],
+      ["6", "10.50 - 11.30", "JL (PKWU)", "JL (PKWU)"],
+      ["7", "11.30 - 12.10", "JL (PKWU)", "JL (PKWU)"],
+      ["-", "12.10 - 12.50", "Ishoma", "Ishoma"],
+      ["8", "12.50 - 13.30", "IM (INFOR)", "IM (INFOR)"],
+      ["9", "13.30 - 14.10", "IM (INFOR)", "IM (INFOR)"],
+      ["10", "14.10 - 14.50", "TR (MULOK)", "TR (MULOK)"],
+      ["11", "14.50 - 15.30", "TR (MULOK)", "TR (MULOK)"],
+    ],
+  },
+  {
+    day: "Jumat",
+    lessons: [
+      ["1", "7.15 - 7.55", "Muhadarah", "Muhadarah"],
+      ["2", "7.55 - 8.35", "DF (PJOK)", "DF (PJOK)"],
+      ["3", "8.35 - 9.15", "DF (PJOK)", "DF (PJOK)"],
+      ["-", "9.15 - 9.30", "Istirahat", "Istirahat"],
+      ["4", "9.30 - 10.10", "IA (SEJ)", "IA (SEJ)"],
+      ["5", "10.10 - 10.50", "IA (SEJ)", "IA (SEJ)"],
+    ],
+  },
+];
+
+const teachers = [
+  ["CH", "Candra Hamadi, S.PdI"],
+  ["SL", "Sulastri, S.Pd"],
+  ["MRY", "Milda Rini Yanti, S.Pd"],
+  ["RA", "Ramadhan Saputra, S.Pd"],
+  ["GG", "Getrina Putri Norma, S.Pd"],
+  ["IF", "Ika Fitriani, S.Pd"],
+  ["DS", "Desy Ike Sudiasih, S.Pd"],
+  ["DF", "Defri, S.Pd"],
+  ["FA", "Fauzia Anggelina, S.Pd"],
+  ["WM", "Widya Mulyana, S.Pd"],
+  ["JL", "Jelpi Novia, S.Pd"],
+  ["IM", "Indah Maulidya, S.Pd"],
+  ["IA", "Irvan Amriansyah, S.Pd"],
+  ["YA", "Yulia Andesta, S.Pd"],
+  ["TR", "Tiara Taufit, S.Pd"],
+];
+
+const classPhotos = [];
+
+classPhotos.splice(
+  0,
+  classPhotos.length,
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.39.jpeg",
+    alt: "Foto bersama siswa kelas di halaman sekolah",
+    caption: "Kebersamaan di halaman sekolah",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.35.jpeg",
+    alt: "Siswa berfoto bersama di dalam kelas",
+    caption: "Potret bersama di ruang kelas",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.34.jpeg",
+    alt: "Siswi berfoto bersama di dalam kelas",
+    caption: "Momen kebersamaan di kelas",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.56.53.jpeg",
+    alt: "Siswa menikmati kegiatan makan bersama di luar ruangan",
+    caption: "Makan bersama di alam terbuka",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.57.06.jpeg",
+    alt: "Siswa berfoto bersama di lingkungan sekolah",
+    caption: "Kegiatan bersama di sekolah",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.37.jpeg",
+    alt: "Siswa berfoto bersama di luar ruangan",
+    caption: "Senyum bersama di luar kelas",
+  },
+  {
+    src: "WhatsApp Image 2026-10-13 at 06.51.50.jpeg",
+    alt: "Siswa berfoto bersama di dalam kelas",
+    caption: "Suasana kebersamaan di kelas",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.38.jpeg",
+    alt: "Siswa berfoto bersama di halaman sekolah",
+    caption: "Foto bersama di halaman sekolah",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 19.59.41.jpeg",
+    alt: "Siswa berkumpul di area sungai",
+    caption: "Kegiatan bersama di area sungai",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 20.00.43.jpeg",
+    alt: "Siswa berfoto bersama di area sungai",
+    caption: "Momen bermain air bersama",
+  },
+  {
+    src: "WhatsApp Image 2026-10-14 at 20.01.23.jpeg",
+    alt: "Siswa berfoto bersama di alam terbuka",
+    caption: "Kenangan kegiatan di alam terbuka",
+  }
+);
+
+const renderStructure = () => {
+  const container = document.getElementById("structure-list");
+  const teacher = document.getElementById("teacher-card");
+  teacher.innerHTML = `
+    <article class="structure-card teacher-card">
+      <span class="role-badge">Wali Kelas</span>
+      <h3>Buk Jelvi Novia</h3>
+      <p>Mendampingi dan membimbing kelas 11.</p>
+    </article>
+  `;
+  container.innerHTML = structureData
+    .map(
+      (item) => `
+        <article class="structure-card">
+          <span class="role-badge">${item.role}</span>
+          <h3>${item.name}</h3>
+          <p>${item.detail}</p>
+        </article>
+      `
+    )
+    .join("");
+};
+
+const renderStudents = () => {
+  const container = document.getElementById("student-list");
+  const search = document.getElementById("student-search").value
+    .trim()
+    .toLocaleLowerCase("id");
+  const selectedMajor = document.getElementById("student-major-filter").value;
+  const sortedStudents = [...students].sort((first, second) =>
+    first.name.localeCompare(second.name, "id")
+  );
+  const filteredStudents = sortedStudents.filter((student) => {
+    const matchesName = student.name.toLocaleLowerCase("id").includes(search);
+    const matchesMajor =
+      selectedMajor === "all" || student.major === selectedMajor;
+    return matchesName && matchesMajor;
+  });
+
+  container.innerHTML = filteredStudents
+    .map((student) => {
+      const initials = student.name
+        .split(/\s+/)
+        .slice(0, 2)
+        .map((part) => part[0])
+        .join("");
+
+      return `
+        <article class="student-card">
+          <div class="student-avatar" aria-hidden="true">${initials}</div>
+          <div class="student-body">
+            <h3>${student.name}</h3>
+            <p>${student.role || "Anggota Kelas"}</p>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  document.getElementById("student-results").textContent =
+    filteredStudents.length > 0
+      ? `Menampilkan ${filteredStudents.length} dari ${students.length} siswa`
+      : "Siswa tidak ditemukan.";
+};
+
+const initStudentFilters = () => {
+  document
+    .getElementById("student-search")
+    .addEventListener("input", renderStudents);
+  document
+    .getElementById("student-major-filter")
+    .addEventListener("change", renderStudents);
+};
+
+
+const renderSchedule = () => {
+  const tbody = document.getElementById("schedule-table-body");
+  const weekday = new Date().getDay();
+  const todayIndex = weekday >= 1 && weekday <= schedule.length
+    ? weekday - 1
+    : 0;
+  tbody.innerHTML = schedule
+    .map(
+      ({ day, lessons }, dayIndex) =>
+        lessons
+          .map(
+            ([period, time, science, business], index) => {
+              const sharedSubject = science === business;
+              const isToday = dayIndex === todayIndex;
+              const classes = [
+                period === "-" ? "schedule-break" : "",
+                isToday ? "schedule-today" : "",
+              ]
+                .filter(Boolean)
+                .join(" ");
+
+              return `
+              <tr${classes ? ` class="${classes}"` : ""} data-day-index="${dayIndex}"${!isToday ? " hidden" : ""}>
+                <td>${index === 0 ? day : ""}</td>
+                <td>${period === "-" ? "—" : period}</td>
+                <td>${time}</td>
+                ${
+                  sharedSubject
+                    ? `<td colspan="2" class="shared-subject">${science}</td>`
+                    : `<td>${science}</td><td>${business}</td>`
+                }
+              </tr>
+              `;
+            }
+          )
+          .join("")
+    )
+    .join("");
+};
+
+const initScheduleToggle = () => {
+  const button = document.getElementById("schedule-toggle");
+  const hiddenRows = document.querySelectorAll(
+    "#schedule-table-body tr[hidden]"
+  );
+  const todayIndex =
+    document.querySelector("#schedule-table-body tr.schedule-today")
+      ?.dataset.dayIndex ?? "0";
+  const hiddenDayCount = schedule.length - 1;
+
+  button.textContent = `Lihat jadwal selengkapnya (${hiddenDayCount} hari lainnya)`;
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    hiddenRows.forEach((row) => {
+      row.hidden = isExpanded && row.dataset.dayIndex !== todayIndex;
+    });
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    button.textContent = isExpanded
+      ? `Lihat jadwal selengkapnya (${hiddenDayCount} hari lainnya)`
+      : "Tampilkan lebih sedikit";
+  });
+};
+
+const renderTeachers = () => {
+  const container = document.getElementById("teacher-list");
+  container.innerHTML = teachers
+    .map(
+      ([code, name]) => `
+        <div class="teacher-entry">
+          <dt>${code}</dt>
+          <dd>${name}</dd>
+        </div>
+      `
+    )
+    .join("");
+};
+
+const renderClassPhotos = () => {
+  const container = document.getElementById("photo-grid");
+  const storageKey = "kelas11-added-photos";
+  const modalError = document.getElementById("photo-modal-error");
+  let addedPhotos = [];
+  let highestZIndex = 0;
+  let previousStageWidth = 0;
+  const cards = [];
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  const isAllowedSource = (source) => {
+    if (typeof source !== "string") {
+      return false;
+    }
+    if (/^data:image\/(?:jpeg|png|gif|webp);base64,[a-z0-9+/]+=*$/i.test(source)) {
+      return true;
+    }
+    try {
+      const url = new URL(source);
+      return url.protocol === "https:" || url.protocol === "http:";
+    } catch {
+      return false;
+    }
+  };
+
+  const positionCards = (force = false) => {
+    if (!cards.length) {
+      return;
+    }
+
+    const stageWidth = container.clientWidth;
+    if (!force && stageWidth === previousStageWidth) {
+      return;
+    }
+    previousStageWidth = stageWidth;
+    const columns = stageWidth <= 700 ? 2 : 4;
+    const rows = Math.ceil(cards.length / columns);
+    const firstCardRect = cards[0].getBoundingClientRect();
+    const cardWidth = firstCardRect.width;
+    const cardHeight = firstCardRect.height;
+    const cellWidth = stageWidth / columns;
+    const rotations = cards.map(() => Math.random() * 20 - 10);
+    const bounds = cards.map((card, index) => {
+      const radians = Math.abs(rotations[index]) * (Math.PI / 180);
+      const width = card.offsetWidth;
+      const height = card.offsetHeight;
+      return {
+        x: Math.max(
+          0,
+          (width * Math.cos(radians) + height * Math.sin(radians) - width) / 2
+        ),
+        y: Math.max(
+          0,
+          (height * Math.cos(radians) + width * Math.sin(radians) - height) / 2
+        ),
+      };
+    });
+    const maxVerticalBounds = Math.max(...bounds.map(({ y }) => y));
+    const rowStep = cardHeight + 20 + maxVerticalBounds * 2;
+    const stageHeight = Math.max(700, 28 + rows * rowStep);
+    container.style.height = `${stageHeight}px`;
+
+    cards.forEach((card, index) => {
+      const column = index % columns;
+      const row = Math.floor(index / columns);
+      const horizontalJitter = (Math.random() - 0.5) * Math.min(24, cellWidth * 0.12);
+      const verticalJitter = (Math.random() - 0.5) * 22;
+      const { x: edgeX, y: edgeY } = bounds[index];
+      const left = clamp(
+        column * cellWidth + (cellWidth - cardWidth) / 2 + horizontalJitter,
+        edgeX,
+        Math.max(edgeX, stageWidth - cardWidth - edgeX)
+      );
+      const top = clamp(
+        14 + row * rowStep + verticalJitter + edgeY,
+        edgeY,
+        Math.max(edgeY, stageHeight - cardHeight - edgeY)
+      );
+
+      card.style.left = `${left}px`;
+      card.style.top = `${top}px`;
+      card.style.setProperty("--rotation", `${rotations[index].toFixed(2)}deg`);
+      card.dataset.edgeX = String(edgeX);
+      card.dataset.edgeY = String(edgeY);
+      card.style.zIndex = String(index + 1);
+    });
+    highestZIndex = cards.length;
+  };
+
+  const createCard = (photo, index) => {
+    const card = document.createElement("figure");
+    card.className = "photo-card";
+    card.tabIndex = 0;
+    card.dataset.photoId = photo.id || `class-photo-${index}`;
+    card.setAttribute("role", "group");
+    card.setAttribute(
+      "aria-label",
+      `Foto ${index + 1}: ${photo.caption}. Geser untuk memindahkan foto.`
+    );
+    card.style.setProperty("--enter-delay", `${index * 45}ms`);
+
+    if (photo.id) {
+      const deleteButton = document.createElement("button");
+      deleteButton.className = "photo-delete-button";
+      deleteButton.type = "button";
+      deleteButton.hidden = !canContribute;
+      deleteButton.textContent = "×";
+      deleteButton.setAttribute("aria-label", `Hapus foto ${photo.caption}`);
+      deleteButton.addEventListener("pointerdown", (event) => {
+        event.stopPropagation();
+        highestZIndex += 1;
+        card.style.zIndex = String(highestZIndex);
+      });
+      deleteButton.addEventListener("click", async (event) => {
+        event.stopPropagation();
+        deleteButton.disabled = true;
+        const accessStatus = document.getElementById("class-access-status");
+        accessStatus.textContent = "Menghapus foto...";
+        const { data, error } = await supabase
+          .from("class_photos")
+          .delete()
+          .eq("id", photo.id)
+          .select("id");
+        if (error) {
+          accessStatus.textContent = "Foto gagal dihapus. Coba lagi.";
+          deleteButton.disabled = false;
+          console.error("Gagal menghapus foto dari Supabase:", error);
+          return;
+        }
+        if (!data.length) {
+          accessStatus.textContent = "Foto sudah tidak tersedia.";
+          card.remove();
+          return;
+        }
+
+        if (photo.storagePath) {
+          const { error: storageError } = await supabase.storage
+            .from("class-photos")
+            .remove([photo.storagePath]);
+          if (storageError) {
+            accessStatus.textContent =
+              "Foto dihapus, tetapi berkasnya gagal dibersihkan dari penyimpanan.";
+            console.error(
+              "Gagal menghapus berkas foto dari Supabase Storage:",
+              storageError
+            );
+          } else {
+            accessStatus.textContent = "Foto berhasil dihapus.";
+          }
+        } else {
+          accessStatus.textContent = "Foto berhasil dihapus.";
+        }
+
+        addedPhotos = addedPhotos.filter((item) => item.id !== photo.id);
+        const cardIndex = cards.indexOf(card);
+        if (cardIndex !== -1) {
+          cards.splice(cardIndex, 1);
+        }
+        card.remove();
+        positionCards(true);
+      });
+      card.append(deleteButton);
+    }
+
+    const image = document.createElement("img");
+    image.src = photo.src;
+    image.alt = photo.alt;
+    image.loading = "lazy";
+    const caption = document.createElement("figcaption");
+    caption.textContent = photo.caption;
+    card.append(image, caption);
+    container.append(card);
+
+    card.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 || event.target.closest(".photo-delete-button")) {
+        return;
+      }
+
+      const stageRect = container.getBoundingClientRect();
+      const dragOffsetX = event.clientX - stageRect.left - card.offsetLeft;
+      const dragOffsetY = event.clientY - stageRect.top - card.offsetTop;
+      highestZIndex += 1;
+      card.style.zIndex = String(highestZIndex);
+      card.classList.add("is-dragging");
+      card.setPointerCapture(event.pointerId);
+      event.preventDefault();
+
+      const moveCard = (moveEvent) => {
+        if (moveEvent.pointerId !== event.pointerId) {
+          return;
+        }
+
+        const edgeX = Number(card.dataset.edgeX);
+        const edgeY = Number(card.dataset.edgeY);
+        const maxLeft = Math.max(
+          edgeX,
+          container.clientWidth - card.offsetWidth - edgeX
+        );
+        const maxTop = Math.max(
+          edgeY,
+          container.clientHeight - card.offsetHeight - edgeY
+        );
+        card.style.left = `${clamp(
+          moveEvent.clientX - stageRect.left - dragOffsetX,
+          edgeX,
+          maxLeft
+        )}px`;
+        card.style.top = `${clamp(
+          moveEvent.clientY - stageRect.top - dragOffsetY,
+          edgeY,
+          maxTop
+        )}px`;
+      };
+
+      const stopDragging = (pointerEvent) => {
+        if (pointerEvent.pointerId !== event.pointerId) {
+          return;
+        }
+        card.classList.remove("is-dragging");
+        if (card.hasPointerCapture(pointerEvent.pointerId)) {
+          card.releasePointerCapture(pointerEvent.pointerId);
+        }
+        card.removeEventListener("pointermove", moveCard);
+        card.removeEventListener("pointerup", stopDragging);
+        card.removeEventListener("pointercancel", stopDragging);
+      };
+
+      card.addEventListener("pointermove", moveCard);
+      card.addEventListener("pointerup", stopDragging);
+      card.addEventListener("pointercancel", stopDragging);
+    });
+
+    card.addEventListener("click", () => {
+      highestZIndex += 1;
+      card.style.zIndex = String(highestZIndex);
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        highestZIndex += 1;
+        card.style.zIndex = String(highestZIndex);
+      }
+    });
+
+    cards.push(card);
+    return card;
+  };
+
+  classPhotos.forEach((photo, index) => createCard(photo, index));
+  positionCards(true);
+  window.addEventListener("resize", () => positionCards());
+
+  const loadAddedPhotos = async () => {
+    let legacyPhotos = [];
+    try {
+      const savedPhotos = window.localStorage.getItem(storageKey);
+      if (savedPhotos !== null) {
+        const parsedPhotos = JSON.parse(savedPhotos);
+        if (!Array.isArray(parsedPhotos)) {
+          throw new TypeError("Format penyimpanan foto harus berupa daftar.");
+        }
+        legacyPhotos = parsedPhotos.filter(
+          (photo) =>
+            photo &&
+            typeof photo.id === "string" &&
+            isAllowedSource(photo.src) &&
+            typeof photo.caption === "string"
+        );
+      }
+    } catch (error) {
+      modalError.textContent = "Data foto lama di browser tidak dapat dibaca.";
+      console.error("Gagal membaca data foto lokal lama:", error);
+      return;
+    }
+
+    if (legacyPhotos.length && canContribute) {
+      const { data: existingPhotos, error: existingError } = await supabase
+        .from("class_photos")
+        .select("id");
+      if (existingError) {
+        modalError.textContent = "Foto publik gagal dimuat dari Supabase.";
+        console.error("Gagal memeriksa foto di Supabase:", existingError);
+        return;
+      }
+
+      const existingIds = new Set(existingPhotos.map(({ id }) => id));
+      const photosToMigrate = [];
+      for (const photo of legacyPhotos.filter(({ id }) => !existingIds.has(id))) {
+        let src = photo.src;
+        let storagePath = null;
+        if (src.startsWith("data:image/")) {
+          const imageBlob = await fetch(src).then((response) => response.blob());
+          const extensionByType = {
+            "image/jpeg": "jpg",
+            "image/png": "png",
+            "image/gif": "gif",
+            "image/webp": "webp",
+          };
+          const extension = extensionByType[imageBlob.type];
+          if (!extension) {
+            modalError.textContent = "Jenis foto lama tidak didukung untuk migrasi.";
+            return;
+          }
+          storagePath = `${photo.id}.${extension}`;
+          const { error: uploadError } = await supabase.storage
+            .from("class-photos")
+            .upload(storagePath, imageBlob, {
+              contentType: imageBlob.type,
+              upsert: true,
+            });
+          if (uploadError) {
+            modalError.textContent = "Foto lama gagal diunggah ke Supabase Storage.";
+            console.error("Gagal memigrasikan berkas foto:", uploadError);
+            return;
+          }
+          const { data: publicUrl } = supabase.storage
+            .from("class-photos")
+            .getPublicUrl(storagePath);
+          src = publicUrl.publicUrl;
+        }
+        photosToMigrate.push({
+          id: photo.id,
+          image_url: src,
+          alt_text: photo.alt || photo.caption,
+          caption: photo.caption,
+          storage_path: storagePath,
+        });
+      }
+
+      if (photosToMigrate.length) {
+        const { error: migrationError } = await supabase
+          .from("class_photos")
+          .insert(photosToMigrate, { defaultToNull: false });
+        if (migrationError) {
+          modalError.textContent = "Foto lama gagal dipindahkan ke Supabase.";
+          console.error("Gagal menyimpan foto lama ke Supabase:", migrationError);
+          return;
+        }
+      }
+      window.localStorage.removeItem(storageKey);
+    }
+
+    const { data, error } = await supabase
+      .from("class_photos")
+      .select("id, image_url, alt_text, caption, storage_path")
+      .order("created_at", { ascending: true });
+    if (error) {
+      modalError.textContent = "Foto publik gagal dimuat dari Supabase.";
+      console.error("Gagal memuat foto dari Supabase:", error);
+      return;
+    }
+
+    addedPhotos = data.map((photo) => ({
+      id: photo.id,
+      src: photo.image_url,
+      alt: photo.alt_text,
+      caption: photo.caption,
+      storagePath: photo.storage_path,
+    }));
+    addedPhotos.forEach((photo) => createCard(photo, cards.length));
+    positionCards(true);
+  };
+
+  loadAddedPhotos().catch((error) => {
+    modalError.textContent = "Foto publik gagal dimuat dari Supabase.";
+    console.error("Terjadi kegagalan saat memuat foto dari Supabase:", error);
+  });
+
+  return {
+    async addPhoto(photo, file = null) {
+      if (!canContribute) {
+        modalError.textContent = "Masuk dengan akun anggota kelas untuk menambahkan foto.";
+        return false;
+      }
+      const record = {
+        id: photo.id,
+        image_url: photo.src,
+        alt_text: photo.alt,
+        caption: photo.caption,
+        storage_path: null,
+      };
+
+      if (file) {
+        const extensionByType = {
+          "image/jpeg": "jpg",
+          "image/png": "png",
+          "image/gif": "gif",
+          "image/webp": "webp",
+        };
+        const extension = extensionByType[file.type];
+        record.storage_path = `${photo.id}.${extension}`;
+        const { data: uploadedFile, error: uploadError } = await supabase.storage
+          .from("class-photos")
+          .upload(record.storage_path, file, {
+            contentType: file.type,
+            upsert: false,
+          });
+        if (uploadError) {
+          modalError.textContent = "Foto gagal diunggah ke Supabase Storage.";
+          console.error("Gagal mengunggah foto:", uploadError);
+          return false;
+        }
+        const { data: publicUrl } = supabase.storage
+          .from("class-photos")
+          .getPublicUrl(uploadedFile.path);
+        record.image_url = publicUrl.publicUrl;
+      }
+
+      const { data, error } = await supabase
+        .from("class_photos")
+        .insert(record)
+        .select("id, image_url, alt_text, caption, storage_path")
+        .single();
+      if (error) {
+        modalError.textContent = "Foto gagal disimpan ke Supabase.";
+        console.error("Gagal menyimpan foto ke Supabase:", error);
+        if (record.storage_path) {
+          const { error: cleanupError } = await supabase.storage
+            .from("class-photos")
+            .remove([record.storage_path]);
+          if (cleanupError) {
+            console.error("Gagal membersihkan unggahan foto yang tidak tersimpan:", cleanupError);
+          }
+        }
+        return false;
+      }
+
+      const savedPhoto = {
+        id: data.id,
+        src: data.image_url,
+        alt: data.alt_text,
+        caption: data.caption,
+        storagePath: data.storage_path,
+      };
+      addedPhotos.push(savedPhoto);
+      createCard(savedPhoto, cards.length);
+      positionCards(true);
+      return true;
+    },
+  };
+};
+
+const initPhotoUpload = (gallery) => {
+  const modal = document.getElementById("photo-add-modal");
+  const addButton = document.getElementById("photo-add-button");
+  const form = document.getElementById("photo-add-form");
+  const fileInput = document.getElementById("photo-file-input");
+  const urlInput = document.getElementById("photo-url-input");
+  const captionInput = document.getElementById("photo-caption-input");
+  const errorMessage = document.getElementById("photo-modal-error");
+
+  const closeModal = () => {
+    modal.close();
+    form.reset();
+    errorMessage.textContent = "";
+  };
+
+  addButton.addEventListener("click", () => {
+    if (!canContribute) {
+      openClassLogin();
+      return;
+    }
+    errorMessage.textContent = "";
+    modal.showModal();
+    captionInput.focus();
+  });
+
+  modal.querySelectorAll("[data-close-photo-modal]").forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length) {
+      urlInput.value = "";
+    }
+  });
+  urlInput.addEventListener("input", () => {
+    if (urlInput.value.trim()) {
+      fileInput.value = "";
+    }
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    errorMessage.textContent = "";
+    const file = fileInput.files[0];
+    const url = urlInput.value.trim();
+    const caption = captionInput.value.trim();
+
+    if (!caption) {
+      errorMessage.textContent = "Isi keterangan foto terlebih dahulu.";
+      captionInput.focus();
+      return;
+    }
+    if (Boolean(file) === Boolean(url)) {
+      errorMessage.textContent = "Pilih satu sumber foto: unggah file atau isi URL.";
+      return;
+    }
+
+    const addPhoto = async (src, file = null) => {
+      const photo = {
+        id: `added-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
+        src,
+        alt: caption,
+        caption,
+      };
+      if (!(await gallery.addPhoto(photo, file))) {
+        return;
+      }
+      closeModal();
+    };
+
+    if (file) {
+      const allowedTypes = ["image/jpeg", "image/png", "image/gif", "image/webp"];
+      if (!allowedTypes.includes(file.type)) {
+        errorMessage.textContent = "Gunakan gambar JPG, PNG, GIF, atau WebP.";
+        return;
+      }
+      if (file.size > 1024 * 1024) {
+        errorMessage.textContent =
+          "Ukuran foto maksimal 1 MB.";
+        return;
+      }
+      await addPhoto("", file);
+      return;
+    }
+
+    let photoUrl;
+    try {
+      photoUrl = new URL(url);
+    } catch {
+      errorMessage.textContent = "Masukkan URL foto yang valid.";
+      return;
+    }
+    if (photoUrl.protocol !== "https:" && photoUrl.protocol !== "http:") {
+      errorMessage.textContent = "URL foto harus menggunakan HTTP atau HTTPS.";
+      return;
+    }
+    await addPhoto(photoUrl.href);
+  });
+};
+
+const majorDetails = {
+  science: {
+    name: "Jurusan Sains",
+    icon: "🧪",
+    slogan: "Logis, Kritis, Eksperimental",
+    showcaseTitle: "Praktikum Laboratorium",
+    showcaseNote: "Foto praktikum belum tersedia.",
+    awards: ["Kalkulator Berjalan"],
+    subjects: [
+      {
+        icon: "🧪",
+        name: "Kimia",
+        quote: "Praktikum kimia: jangan lupa, yang bereaksi bukan cuma bahan.",
+      },
+      {
+        icon: "⚛️",
+        name: "Fisika",
+        quote: "Kalau rumusnya belum ketemu, mungkin variabelnya sedang sembunyi.",
+      },
+      {
+        icon: "📐",
+        name: "Matematika TL (Tingkat Lanjut)",
+        quote: "Katanya cuma cari X, tapi kenapa langkahnya banyak sekali?",
+      },
+    ],
+  },
+  business: {
+    name: "Jurusan Bisnis",
+    icon: "📈",
+    slogan: "Kreatif, Inovatif, Visioner",
+    showcaseTitle: "Produk Siswa & Market Day",
+    showcaseNote: "Foto produk atau Market Day belum tersedia.",
+    awards: ["Si Paling Cuan", "Menteri Keuangan"],
+    subjects: [
+      {
+        icon: "📊",
+        name: "Ekonomi",
+        quote: "Belajar ekonomi: kebutuhan banyak, waktu belajar terbatas.",
+      },
+      {
+        icon: "🌍",
+        name: "Geografi",
+        quote: "Peta boleh berliku, yang penting jangan tersesat pas ujian.",
+      },
+      {
+        icon: "🔤",
+        name: "Bahasa Inggris TL (Tingkat Lanjut)",
+        quote: "Keep calm, kerjakan dulu—panik bukan bagian dari grammar.",
+      },
+    ],
+  },
+};
+
+const initMajorModals = () => {
+  const modal = document.getElementById("major-modal");
+  const content = document.getElementById("major-modal-content");
+
+  document.querySelectorAll(".family-logo-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const major = majorDetails[trigger.dataset.major];
+      const majorStudents = students
+        .filter((student) => student.major === trigger.dataset.major)
+        .sort((first, second) => first.name.localeCompare(second.name, "id"));
+
+      content.innerHTML = `
+        <header class="major-modal-header">
+          <span class="major-modal-icon" aria-hidden="true">${major.icon}</span>
+          <div>
+            <h2 id="major-modal-title">${major.name}</h2>
+            <p>${major.slogan}</p>
+          </div>
+          <button
+            class="major-modal-close"
+            type="button"
+            aria-label="Tutup informasi jurusan"
+            autofocus
+          >×</button>
+        </header>
+
+        <section class="major-modal-section" aria-labelledby="major-students-title">
+          <h3 id="major-students-title">Biodata Siswa</h3>
+          <div class="major-student-count">
+            <strong>${majorStudents.length}</strong>
+            <span>siswa</span>
+          </div>
+          <ul class="major-student-list">
+            ${majorStudents.map((student) => `<li>${student.name}</li>`).join("")}
+          </ul>
+        </section>
+
+        <section class="major-modal-section" aria-labelledby="major-showcase-title">
+          <h3 id="major-showcase-title">Showcase Karya</h3>
+          <div class="major-showcase-grid">
+            <div class="major-showcase-placeholder">
+              <strong>${major.showcaseTitle}</strong>
+              <p>${major.showcaseNote}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="major-modal-section" aria-labelledby="major-hall-title">
+          <h3 id="major-hall-title">Hall of Fame</h3>
+          <p>Belum ada pencapaian siswa yang ditambahkan.</p>
+        </section>
+
+        <section class="major-modal-section" aria-labelledby="major-awards-title">
+          <h3 id="major-awards-title">Awards Lucu</h3>
+          <div class="major-award-grid">
+            ${major.awards
+              .map(
+                (award) => `
+                  <div class="major-award-card">${award}</div>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+
+        <section class="major-modal-section" aria-labelledby="major-subject-title">
+          <h3 id="major-subject-title">Mata Pelajaran Khas</h3>
+          <div class="major-subject-list">
+            ${major.subjects
+              .map(
+                (subject) => `
+                  <div class="major-subject">
+                    <span class="major-subject-icon" aria-hidden="true">${subject.icon}</span>
+                    <div>
+                      <strong>${subject.name}</strong>
+                      <blockquote>“${subject.quote}”</blockquote>
+                    </div>
+                  </div>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+
+      modal.showModal();
+      content
+        .querySelector(".major-modal-close")
+        .addEventListener("click", () => modal.close());
+    });
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+};
+
+const initClassTools = async () => {
+  const quotes = [
+    "Niat belajar sudah ada, tinggal menunggu sinyal dari otak.",
+    "Tugas kelompok mengajarkan bahwa kata “kelompok” kadang berarti satu orang bekerja.",
+    "Belajar itu seperti menabung: sedikit-sedikit, tahu-tahu bel istirahat.",
+    "Kalau hari ini belum paham, berarti otak sedang mengunduh materi.",
+    "Semangat sekolah: datang untuk belajar, pulang membawa cerita.",
+  ];
+  const storageKey = "kelas11-countdown-events";
+  const legacyStorageKey = "kelas11-countdown-event";
+  const quote = document.getElementById("daily-quote");
+  const form = document.getElementById("countdown-form");
+  const nameInput = document.getElementById("countdown-event-input");
+  const dateInput = document.getElementById("countdown-date-input");
+  const eventList = document.getElementById("countdown-list");
+  const addButton = document.getElementById("countdown-add");
+  const cancelButton = document.getElementById("countdown-form-cancel");
+  const status = document.getElementById("countdown-status");
+  let events = [];
+  let countdownInterval = null;
+
+  quote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+  const setStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.classList.toggle("is-error", isError);
+  };
+
+  const createCountdownDisplay = () => {
+    const display = document.createElement("div");
+    display.className = "countdown-display";
+    display.setAttribute("aria-label", "Waktu menuju acara");
+
+    [
+      ["days", "Hari"],
+      ["hours", "Jam"],
+      ["minutes", "Menit"],
+      ["seconds", "Detik"],
+    ].forEach(([unit, label]) => {
+      const item = document.createElement("div");
+      item.className = "countdown-unit";
+      const value = document.createElement("strong");
+      value.dataset.countdown = unit;
+      value.textContent = "00";
+      const unitLabel = document.createElement("span");
+      unitLabel.textContent = label;
+      item.append(value, unitLabel);
+      display.append(item);
+    });
+
+    return display;
+  };
+
+  const setCountdown = (display, timeLeft) => {
+    const days = Math.floor(timeLeft / 86400000);
+    const hours = Math.floor((timeLeft % 86400000) / 3600000);
+    const minutes = Math.floor((timeLeft % 3600000) / 60000);
+    const seconds = Math.floor((timeLeft % 60000) / 1000);
+
+    display.querySelector('[data-countdown="days"]').textContent = String(days).padStart(2, "0");
+    display.querySelector('[data-countdown="hours"]').textContent = String(hours).padStart(2, "0");
+    display.querySelector('[data-countdown="minutes"]').textContent = String(minutes).padStart(2, "0");
+    display.querySelector('[data-countdown="seconds"]').textContent = String(seconds).padStart(2, "0");
+  };
+
+  dateInput.min = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+    .toISOString()
+    .slice(0, 16);
+
+  const renderEvents = () => {
+    eventList.replaceChildren();
+    events
+      .slice()
+      .sort((first, second) => first.timestamp - second.timestamp)
+      .forEach((event) => {
+        const card = document.createElement("article");
+        card.className = "countdown-event-card";
+      card.dataset.timestamp = String(event.timestamp);
+
+        const header = document.createElement("div");
+        header.className = "countdown-event-header";
+        const details = document.createElement("div");
+        const name = document.createElement("h3");
+        name.className = "countdown-event-name";
+        name.textContent = event.name;
+        const date = document.createElement("p");
+        date.className = "countdown-event-date";
+        date.textContent = new Intl.DateTimeFormat("id-ID", {
+          dateStyle: "full",
+          timeStyle: "short",
+        }).format(event.timestamp);
+        details.append(name, date);
+
+        header.append(details);
+
+        const display = createCountdownDisplay();
+        card.append(header, display);
+        eventList.append(card);
+      });
+
+    updateCountdowns();
+    if (countdownInterval !== null) {
+      window.clearInterval(countdownInterval);
+      countdownInterval = null;
+    }
+    if (events.some((event) => event.timestamp > Date.now())) {
+      countdownInterval = window.setInterval(updateCountdowns, 1000);
+    }
+  };
+
+  const updateCountdowns = () => {
+    eventList.querySelectorAll(".countdown-event-card").forEach((card) => {
+      const timeLeft = Number(card.dataset.timestamp) - Date.now();
+      setCountdown(
+        card.querySelector(".countdown-display"),
+        Math.max(0, timeLeft)
+      );
+      if (timeLeft <= 0) {
+        card.dataset.completed = "true";
+      }
+    });
+  };
+
+  addButton.addEventListener("click", () => {
+    if (!canContribute) {
+      openClassLogin();
+      return;
+    }
+    form.hidden = false;
+    addButton.setAttribute("aria-expanded", "true");
+    addButton.hidden = true;
+    nameInput.focus();
+  });
+
+  cancelButton.addEventListener("click", () => {
+    form.reset();
+    form.hidden = true;
+    addButton.hidden = false;
+    addButton.setAttribute("aria-expanded", "false");
+    setStatus(
+      events.length
+        ? "Acara tersimpan dan dibagikan melalui Supabase."
+        : "Belum ada acara yang disetel. Tekan tombol + untuk menambah acara."
+    );
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!canContribute) {
+      form.hidden = true;
+      openClassLogin();
+      return;
+    }
+    const name = nameInput.value.trim();
+    const timestamp = new Date(dateInput.value).getTime();
+
+    if (!name || !Number.isFinite(timestamp)) {
+      setStatus("Isi nama acara dan tanggal yang valid.", true);
+      return;
+    }
+
+    if (timestamp <= Date.now()) {
+      setStatus("Pilih tanggal dan waktu yang masih akan datang.", true);
+      return;
+    }
+
+    const eventToSave = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
+      name,
+      timestamp,
+    };
+    const { data, error } = await supabase
+      .from("class_events")
+      .insert({
+        id: eventToSave.id,
+        name: eventToSave.name,
+        event_at: new Date(eventToSave.timestamp).toISOString(),
+      })
+      .select("id, name, event_at")
+      .single();
+    if (error) {
+      setStatus("Acara gagal disimpan ke Supabase. Coba lagi.", true);
+      console.error("Gagal menyimpan acara ke Supabase:", error);
+      return;
+    }
+
+    events.push({
+      id: data.id,
+      name: data.name,
+      timestamp: new Date(data.event_at).getTime(),
+    });
+    renderEvents();
+    setStatus("Acara berhasil disimpan dan dibagikan.");
+    form.reset();
+    form.hidden = true;
+    addButton.hidden = false;
+    addButton.setAttribute("aria-expanded", "false");
+  });
+
+  let savedEvents;
+  let isLegacyStorage = false;
+  try {
+    savedEvents = window.localStorage.getItem(storageKey);
+    if (savedEvents === null) {
+      savedEvents = window.localStorage.getItem(legacyStorageKey);
+      isLegacyStorage = savedEvents !== null;
+    }
+  } catch (error) {
+    setStatus("Penyimpanan browser tidak dapat diakses.", true);
+    console.error("Gagal membaca timer acara:", error);
+    return;
+  }
+
+  if (savedEvents === null) {
+    savedEvents = "[]";
+  }
+
+  let parsedEvents;
+  try {
+    parsedEvents = JSON.parse(savedEvents);
+  } catch (error) {
+    setStatus("Data acara tersimpan rusak. Hapus data situs lalu atur ulang acara.", true);
+    console.error("Data acara tersimpan tidak valid:", error);
+    return;
+  }
+
+  if (!Array.isArray(parsedEvents)) {
+    if (
+      isLegacyStorage &&
+      parsedEvents &&
+      typeof parsedEvents.name === "string" &&
+      parsedEvents.name.trim() &&
+      typeof parsedEvents.timestamp === "number" &&
+      Number.isFinite(parsedEvents.timestamp)
+    ) {
+      parsedEvents = [
+        {
+          id: "migrated-event",
+          name: parsedEvents.name.trim(),
+          timestamp: parsedEvents.timestamp,
+        },
+      ];
+    } else {
+      setStatus("Format data acara tersimpan tidak valid.", true);
+      return;
+    }
+  }
+
+  const localEvents = parsedEvents.filter(
+    (event) =>
+      event &&
+      typeof event.id === "string" &&
+      typeof event.name === "string" &&
+      event.name.trim() &&
+      typeof event.timestamp === "number" &&
+      Number.isFinite(event.timestamp)
+  );
+  if (localEvents.length !== parsedEvents.length) {
+    setStatus("Beberapa data acara tersimpan tidak valid dan dilewati.", true);
+    console.error("Sebagian data acara tersimpan memiliki format tidak valid.");
+  }
+
+  const { data: existingEvents, error: existingError } = await supabase
+    .from("class_events")
+    .select("id");
+  if (existingError) {
+    setStatus("Acara publik gagal dimuat. Pastikan SQL Supabase sudah dijalankan.", true);
+    console.error("Gagal memuat acara dari Supabase:", existingError);
+    return;
+  }
+
+  const existingIds = new Set(existingEvents.map(({ id }) => id));
+  const eventsToMigrate = canContribute
+    ? localEvents
+        .filter(({ id }) => !existingIds.has(id))
+        .map((item) => ({
+          id: item.id,
+          name: item.name.trim(),
+          event_at: new Date(item.timestamp).toISOString(),
+        }))
+    : [];
+  if (eventsToMigrate.length) {
+    const { error: migrationError } = await supabase
+      .from("class_events")
+      .insert(eventsToMigrate);
+    if (migrationError) {
+      setStatus("Acara lama gagal dipindahkan ke Supabase.", true);
+      console.error("Gagal memigrasikan acara lama:", migrationError);
+      return;
+    }
+  }
+
+  if (canContribute && (savedEvents !== "[]" || isLegacyStorage)) {
+    window.localStorage.removeItem(storageKey);
+    window.localStorage.removeItem(legacyStorageKey);
+  }
+
+  const { data: remoteEvents, error: loadError } = await supabase
+    .from("class_events")
+    .select("id, name, event_at")
+    .order("event_at", { ascending: true });
+  if (loadError) {
+    setStatus("Acara publik gagal dimuat dari Supabase.", true);
+    console.error("Gagal membaca daftar acara dari Supabase:", loadError);
+    return;
+  }
+
+  events = remoteEvents.map((item) => ({
+    id: item.id,
+    name: item.name,
+    timestamp: new Date(item.event_at).getTime(),
+  }));
+  renderEvents();
+  setStatus(
+    events.length
+      ? "Acara tersimpan dan dibagikan melalui Supabase."
+      : "Belum ada acara yang disetel. Tekan tombol + untuk menambah acara."
+  );
+};
+
+const initHeroPhoto = () => {
+  const image = document.getElementById("hero-photo");
+  image.src = classPhotos[1].src
+    .split("/")
+    .map((part) => encodeURIComponent(part))
+    .join("/");
+};
+
+const initMenu = () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Buka menu");
+    });
+  });
+};
+
+const initScrollAnimations = () => {
+  const targets = document.querySelectorAll(
+    ".section-heading, .profile-text, .highlight-box, .family-card, .structure-card, .student-card, .teacher-legend, .contact-list"
+  );
+
+  if (
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+    !("IntersectionObserver" in window)
+  ) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  targets.forEach((target, index) => {
+    target.classList.add("scroll-reveal");
+    target.style.setProperty("--reveal-delay", `${(index % 4) * 70}ms`);
+    observer.observe(target);
+  });
+};
+
+await initializeClassAccess();
+initClassLogin();
+renderStructure();
+renderStudents();
+initStudentFilters();
+renderSchedule();
+initScheduleToggle();
+renderTeachers();
+const photoGallery = renderClassPhotos();
+initPhotoUpload(photoGallery);
+initMajorModals();
+initClassTools().catch((error) => {
+  const status = document.getElementById("countdown-status");
+  status.textContent = "Acara publik gagal dimuat dari Supabase.";
+  status.classList.add("is-error");
+  console.error("Terjadi kegagalan saat memuat acara dari Supabase:", error);
+});
+initHeroPhoto();
+initMenu();
+initScrollAnimations();
+
+    </script>
+  </body>
+</html>
